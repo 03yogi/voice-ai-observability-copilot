@@ -13,8 +13,14 @@ POST /api/sync
 
 ## Provider selection
 
+**Primary:** configure in the app under **AI Settings** (`/settings`) — stored in `llm_settings` (SQLite).
+
+**Optional `.env` fallback** (for local dev without opening the UI):
+
 ```env
 LLM_PROVIDER=openai   # or gemini
+OPENAI_API_KEY=...
+GEMINI_API_KEY=...
 ```
 
 | Provider | Key | Default model |
@@ -22,7 +28,9 @@ LLM_PROVIDER=openai   # or gemini
 | openai | OPENAI_API_KEY | gpt-4o-mini |
 | gemini | GEMINI_API_KEY | gemini-2.0-flash |
 
-Implementation: `apps/api/src/llm/provider.js` — single `llmCompleteJson()` entry point.
+**Evaluation:** one LLM call per call (`evaluate.js` → `llmCompleteJson()`), not a multi-stage extract/score/recommend pipeline. **Recommendations** are a separate agent-level LLM call (`recommendations.js`).
+
+Implementation: `apps/api/src/llm/provider.js` — single `llmCompleteJson()` entry point; `schemas.js` normalizes JSON (not Zod).
 
 ## Per-call evaluation
 

@@ -1,5 +1,7 @@
 # Voice AI Observability Copilot — Build Plan
 
+> **Note:** This is the **original planning document** (pre-implementation). For the **as-built** system, use [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md), [README.md](README.md), and [SUBMISSION.md](SUBMISSION.md). Some sections below (e.g. three-stage LLM, Zod, `/api/connect`, `packages/shared`, Postgres) were simplified or changed during the build.
+
 **Assignment:** [Hiring] FSB Assignment Q226  
 **Target:** 2-week solo build closing the loop **transcripts → KPI gaps → dashboard → recommendations**, with a crisp **2–5 minute demo**.
 

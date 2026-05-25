@@ -6,9 +6,11 @@ Use this doc for local testing and as the backend integration spec for the proje
 
 ---
 
-## Environment variables
+## Credentials (how the app uses GHL)
 
-Store credentials in `.env` at the project root — **never commit the token**.
+**Primary (production / iframe):** per-agent **location JWT + location ID** in the app under **Settings → Agents** (`monitored_agents` in SQLite). No token in the browser after save.
+
+**Optional (local curls / scripts):** root `.env` variables below — **never commit the token**.
 
 ```env
 GHL_API_TOKEN=pit-your-private-integration-token

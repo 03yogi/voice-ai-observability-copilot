@@ -46,11 +46,26 @@ flowchart LR
 
 ## Database (SQLite)
 
-- `monitored_agents` — credentials, evaluation prompt, `sync_interval_minutes`, `last_auto_sync_at`
-- `agents`, `calls` — synced from GHL (`extracted_data`, transcript, status)
-- `call_evaluations` — scores, KPIs, deviations, use_actions, suggestions, fingerprint
+- `monitored_agents` — per-agent GHL JWT, location, `evaluation_prompt`, `sync_interval_minutes`, `last_auto_sync_at`
+- `agents`, `calls` — synced from GHL (`extracted_data`, transcript, `status`: pending / analyzed)
+- `call_evaluations` — scores, KPIs, deviations, use_actions, suggestions, `eval_fingerprint`
 - `recommendations` — cached agent-level insight items
-- `llm_settings` — provider API keys (UI-managed)
+- `llm_settings`, `ghl_settings` — optional UI-managed defaults (runtime uses per-agent creds in Agents settings)
+- `sync_runs` — sync job history
+
+`agent-records.js` backfills `agents` rows when agents are added to the monitor list (dashboard shows monitored agents even before first sync).
+
+## Web routes (Vue)
+
+| Route | Screen |
+|-------|--------|
+| `/` | Overview + sync |
+| `/settings` | LLM provider + API key |
+| `/settings/agents` | Monitored agents, GHL JWT, auto-fetch schedule, evaluation criteria |
+| `/settings/ghl` | Optional global GHL defaults |
+| `/agents/:id` | Call list |
+| `/agents/:id/calls/:callId` | Call detail |
+| `/agents/:id/insights` | Agent recommendations |
 
 ## Deployment modes
 

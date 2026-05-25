@@ -13,8 +13,8 @@ Voice AI Observability Copilot for HighLevel.
 | Install & run docs | Done | `README.md` |
 | Architecture + Team of One | Done | `README.md`, `docs/ARCHITECTURE.md` |
 | Functional vs mocked | Done | `README.md` § Functional vs mocked |
-| **GitHub repo URL** | https://github.com/03yogi/voice-ai-observability-copilot |
-| **Loom demo (2–5 min)** | **You** | Record; add URL to README |
+| **GitHub repo URL** | Done — https://github.com/03yogi/voice-ai-observability-copilot |
+| **Loom demo (2–5 min)** | **You** | Record; add URL to README (top + this table) |
 
 ## Before you submit (15 min checklist)
 

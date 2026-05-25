@@ -2,6 +2,8 @@
 
 **Repository:** https://github.com/03yogi/voice-ai-observability-copilot
 
+**Demo video (Loom, 2–5 min):** _Add your link here before submit — e.g. `https://www.loom.com/share/...`_
+
 Agent Observability Copilot for HighLevel Voice AI — syncs call transcripts, evaluates each call session with an LLM, and surfaces AI-generated recommendations inside a GHL sub-account iframe.
 
 ## Problem and solution
@@ -130,7 +132,13 @@ Detailed diagram and module map: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
 
 ## Submission
 
-See [SUBMISSION.md](SUBMISSION.md) for deliverable checklist, demo flow, and remaining steps (GitHub + Loom).
+| Deliverable | Status |
+|-------------|--------|
+| GitHub repo | https://github.com/03yogi/voice-ai-observability-copilot |
+| Loom demo | Record 2–5 min; paste URL at top of this README and in [SUBMISSION.md](SUBMISSION.md) |
+| Install / architecture / Team of One | This README + [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) |
+
+Checklist and reviewer notes: [SUBMISSION.md](SUBMISSION.md).
 
 ## Team of one
 
