@@ -1,0 +1,23 @@
+# Secrets
+.env
+.env.local
+
+# Dependencies
+node_modules/
+
+# SQLite (local data)
+data/
+*.db
+*.db-*
+
+# Build output
+apps/web/dist/
+
+# Logs / OS
+*.log
+.DS_Store
+.idea/
+.vscode/
+
+# Vite cache
+apps/web/node_modules/.vite/
